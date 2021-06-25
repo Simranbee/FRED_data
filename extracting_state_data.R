@@ -10,7 +10,7 @@ setwd("~/Documents/fred")
 #you can change it to whatever you need ex: "UR" for unemployment data)
 
 download_all_states <- function(state_code) {
-  fred_code <- str_c(state_code, "RGSP")  #the only you change is RGSP
+  fred_code <- str_c(state_code, "RGSP")  #the only thing you change is RGSP
   
   tq_get(fred_code, get = "economic.data",
        from = "1997-01-01") %>%
